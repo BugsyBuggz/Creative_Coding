@@ -1,12 +1,12 @@
 require("L5")
 
 function setup()
-  size(400, 400)
+  size(700, 700)
 
   -- Set the program title
   windowTitle("Basic sketch")
 
-  describe('Draws a yellow background')
+  describe('Draws a blue background')
 end
 
 function draw()
