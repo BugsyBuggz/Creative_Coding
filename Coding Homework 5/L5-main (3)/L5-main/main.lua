@@ -12,4 +12,6 @@ end
 function draw()
   -- Fills the background with the color blue
   background(150, 200, 255)
+
+  rect(width / 10, height / 2, width / 4 , width / 3)
 end
