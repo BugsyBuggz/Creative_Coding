@@ -23,10 +23,15 @@ function draw()
 
   -- Cloud
   fill(255,255,255)
-  ellipse(mouseX, width/10, height / 4,width/7)
-
-  fill(255,255,255)
-  ellipse(mouseX, width/4, height / 6)
+  -- Central Cloud
+  ellipse(mouseX, height*0.12, height / 7,width/14)
+  ellipse(mouseX+50, height*0.08, height/7, width/12)
+  -- Upper Cloud (Left)
+  ellipse(mouseX+80, height*0.12, height/8, width/14)
+  -- Upper Cloud (Right)
+  ellipse(mouseX+100, height*0.12, height/8, width/14)
+  -- Lower Part of Cloud
+  ellipse(mouseX+150, height*0.12, height/8, width/14)
   
   -- Pink Building
   fill(250,60,250)
