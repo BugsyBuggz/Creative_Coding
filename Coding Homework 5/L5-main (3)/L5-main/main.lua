@@ -23,7 +23,7 @@ function draw()
 
   -- Cloud
   fill(255,255,255)
-  ellipse(mouseX, width/4, height / 6)
+  ellipse(mouseX, width/10, height / 4,width/7)
 
   fill(255,255,255)
   ellipse(mouseX, width/4, height / 6)
@@ -134,7 +134,7 @@ function draw()
   rect(width*0.1, height*0.2, width/6, height*2)
 
   -- Grey building
-  fill(128,128,128)
+  fill(120,228,228)
   rect(width/1.4, height/4.1, width/6, height*2)
   
   fill(0)
