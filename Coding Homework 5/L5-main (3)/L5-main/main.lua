@@ -121,27 +121,31 @@ function draw()
   fill(0,150,225)
   rect(width*0.37,height*0.92,width/5,height/80)
 
+  -- Left teal building
   fill(120,228,228)
   rect(width*0.2, height*0.3, width/6, height*2)
 
+  -- Right blue building`
   fill(0,0,100)
   rect(width/1.2, height/1.85, width/6, height/2)
 
-  fill(28,28,100)
-  rect(width/1.4, height/4.1, width/6, height*2)
-
-  
-
+  -- Left red building
   fill(200,28,100)
   rect(width*0.001, height*0.4, width/6, height*2)
 
+  -- Left Blue building
   fill(28,28,100)
   rect(width*0.1, height*0.2, width/6, height*2)
 
-  -- Grey building
+  -- Right teal building
   fill(120,228,228)
   rect(width/1.4, height/4.1, width/6, height*2)
+
+  --Meteor
+  fill(40,28,28)
+  ellipse(mouseX,mouseY,width/11,height/8)
   
+  -- Location of Mouse
   fill(0)
   text("X: "..mouseX/width.."  Y: "..mouseY/height, mouseX+5,mouseY+30)
 end
