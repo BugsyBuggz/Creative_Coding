@@ -1,80 +1,50 @@
--- Homework 6
 require("L5")
 
-cyanValue = 32
-cyanSpeed = 5
+-- Circle one
+local circleOneY = 40
+local circleOneX = 40
+local circleOneRadius = 20
 
-blueValue = 32
-blueSpeed = 2
+-- Circle two
+local circleTwoY = 60
+local circleTwoX = 60
+local circleTwoRadius = 30
 
-greenValue = 66
-greenSpeed = 10
+--Circle three
+local circleThreeY = 80
+local circleThreeX = 80
+local circleThreeRadius = 40
 
-circleSize = 300
-growing = true
+--Square one
+local squareOneY = 40
+local squareOneX = 40
+local squareSize = 60
 
-circleY = 0
-ySpeed = 2
-
-function setup()
-  size(600,600)
-  windowTitle("Homework 6")
-  noStroke()
-  rectMode(CENTER)
-  angleMode(DEGREES)
+function setup ()   
+-- Canvas size
+    size (400,400)
 end
 
 function draw()
-  background(218, 89, 245)
+    background(255,65,77)
+    circleOneX = circleOneX + 1
+    circleOneRadius = circleOneRadius + 1
+    circle(circleOneX, circleOneY, circleOneRadius)
+    circle(circleTwoX, circleTwoY, circleTwoRadius)
+    circle(circleThreeX, circleThreeY, circleThreeRadius)
+    square(squareOneX,squareOneY,squareSize)
 
-   fill(cyanValue, 247, 240)
-   circle(width / 2, height / 2, circleSize)
+    if circleOneRadius > 200 then
+        circleOneRadius = 40
+    end
 
-   if growing then
-    circleSize = circleSize + 1
-  else
-    circleSize = circleSize - 1
-  end
+    if circleOneX > 200 then
+        fill(0,255,0)
+    else
+        fill(0,0,255)
+    end
 
-  fill(blueValue, 247, 240)
-  circle(150, 150, 100)
-
-  blueValue = blueValue + blueSpeed
-
-  -- Bounce between 0 and 255
-  if blueValue < 0 or blueValue > 255 then
-    blueSpeed = blueSpeed * -1
-  end
-
-  -- Switch direction at limits
-  if circleSize > 200 then
-    growing = false
-  elseif circleSize < 50 then
-    growing = true
-  end
-
-  cyanValue = cyanValue + cyanSpeed
-
-  -- Bounce between 0 and 255
-  if cyanValue < 0 or cyanValue > 255 then
-    cyanSpeed = cyanSpeed * -1
-  end
-
-  fill(greenValue, 245, 87)
-  circle(width/4,height/4, circleSize)
-
-  greenValue = greenValue + greenSpeed
-
-   -- Bounce between 0 and 255
-  if greenValue < 0 or greenValue > 255 then
-    greenSpeed = greenSpeed * -1
-  end
-
-  circle(150, circleY, 50)
-  circleY = circleY + ySpeed
-
-  --Bounce off top and bottom
-  if circleY < 0 or circleY > height then
-    ySpeed = ySpeed * -1
-  end
+    if circleOneX > 400 then
+        circleOneX = 0
+    end
 end
