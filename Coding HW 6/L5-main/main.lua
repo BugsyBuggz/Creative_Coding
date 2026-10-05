@@ -1,5 +1,8 @@
 require("L5")
 
+-- Set the program title
+  windowTitle("Homework 6 Animation")
+
 -- Circle one
 local circleOneY = 40
 local circleOneX = 40
