@@ -169,4 +169,38 @@ function drawsquares()
     square (i,0,20)
   end
   pop()
+
+   push()
+  fill(255,random(232),0)
+  translate( width*0.45, height*0.7)
+  rotate(90)
+  for i = 0,400,70 do
+    square (0,i,40)
+  end
+  pop()
+
+  push()
+  fill(255,random(232),0)
+  translate( width*0.055, height*0.7)
+  rotate(-90)
+  for i = 0,400,70 do
+    square (0,i,40)
+  end
+  pop()
+
+  push()
+  fill(255,random(232),0)
+  translate( width/4, height*0.1)
+  for i = 0,400,80 do
+    square (0,i,40)
+  end
+  pop()
+
+  push()
+  fill(255,random(232),0)
+  translate( width/4, height*0.1)
+  for i = 0,400,80 do
+    circle (0,i,20)
+  end
+  pop()
 end
