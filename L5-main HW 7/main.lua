@@ -20,19 +20,19 @@ function setup()
   background(0, 120, 191)
 
   square(200,400,random(200))
-  circle(random(200),30,40)
+  fill(50,random(121),191)
+
+  circle(200,200,80)
   fill(255,random(232),random(0))
+
+  square(width/4,height*0.7,40)
+  fill(random(255),91,200)
 
   -- Dividing Line
   push()
  
   translate(width/2,0)
   line(0,0,0,height)
-
-  -- Right Side Upper Squares
-  for i = 0,100,100 do
-  square (i,0,100)
-  end
  
   pop()
 
@@ -43,10 +43,21 @@ function mouseClicked()
   -- Fills the background with the color RGB Blue
   background(0, 120, 191)
   -- Left Random Square
-  square(200,random(400),random(200))
+  push()
+  square(200,random(200),random(200))
+  fill(random(255),232,0)
+  pop()
+
+  push()
+  square(width/4,height*0.7,random(232))
+  fill(random(255),91,200)
+  pop()
+
+  push()
   -- Left Random circle
-  circle(random(200),30,40)
+  circle(200,200,80)
   fill(255,random(232),random(0))
+  pop()
 
   push()
  
