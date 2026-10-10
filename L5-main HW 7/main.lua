@@ -184,7 +184,7 @@ function drawsquares()
   translate( width*0.055, height*0.7)
   rotate(-90)
   for i = 0,400,70 do
-    square (0,i,40)
+    circle (0,i,40)
   end
   pop()
 
