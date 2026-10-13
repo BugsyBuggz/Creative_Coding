@@ -17,9 +17,8 @@ end
 
 function mouseClicked()
   -- Fills the background with blue
- 
+  background(100,100,255)
   textAlign(CENTER)
-  translate(300,height/4)
   textSize(20)
   text('Id like to order a new 66 Mustang '..random(bodyStyles).." please.", 300, 200)
 
