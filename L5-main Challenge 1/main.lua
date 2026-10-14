@@ -1,15 +1,33 @@
 require("L5")
 
 function setup()
-  size(400, 400)
+  size(800,600)
+  windowTitle("Coding Challenge")
 
-  -- Set the program title
-  windowTitle("Basic sketch")
+  background("midnightblue")
+  strokeWeight(5)
 
-  describe('Draws a yellow background')
+  describe("A drawing program in a midnight blue window producing random colors each time you draw.")
 end
 
-function draw()
-  -- Fills the background with the color yellow
-  background(255, 215, 0)
+function mouseDragged()
+  line(mouseX, mouseY, pmouseX, pmouseY)
 end
+
+function mousePressed()
+  stroke(random(255),random(255),random(255))
+end 
+
+function mousePressed()
+  stroke(random(255),random(255),random(255))
+end 
+
+--We use the key pressed function here
+function keyPressed()
+--If you hit the s key, save an image
+  if (key == 's')
+  then save("main.lua")
+  end
+end
+
+
