@@ -23,14 +23,6 @@ function mousePressed()
   stroke(random(255),random(255),random(255))
 end 
 
---We use the key pressed function here
-function keyPressed()
---If you hit the s key, save an image
-  if (key == 's')
-  then save("Coding Challenge 1")
-  end
-end
-
 function draw()
   font = loadFont('assets/IndieFlower-Regular.ttf')
   textSize(50)
@@ -48,5 +40,7 @@ function keyPressed()
   elseif (key == 'c')
   then clear()
   background("midnightblue")
+  elseif (key == 's')
+  then save("Coding Challenge 1")
   end
 end
