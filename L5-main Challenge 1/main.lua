@@ -1,5 +1,10 @@
 require("L5")
 
+--In Progress Incremental StrokeWeight
+local b = 20
+
+--How it works:"click = draw, s = save, c = clear, z = increase Strokeweight, x = decrease strokeWeight",400,200)
+
 function setup()
   size(800,600)
   windowTitle("Coding Challenge")
@@ -26,4 +31,27 @@ function keyPressed()
   end
 end
 
+function keyPressed()
+  --Increase Strokeweight
+  if (key == "z")
+    then strokeWeight(20)
+  else if (key == "x") then 
+    strokeWeight(5)
+  end
+end
+end
 
+function draw()
+  font = loadFont('assets/IndieFlower-Regular.ttf')
+  textSize(50)
+  textFont(font)
+  text("Coding Is Hard",250,height/2)
+end
+
+function keyPressed()
+  --Clear Screen
+  if (key == 'c')
+  then clear()
+  background("midnightblue")
+  end
+end
