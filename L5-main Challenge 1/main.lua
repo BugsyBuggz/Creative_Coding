@@ -26,7 +26,7 @@ end
 function keyPressed()
 --If you hit the s key, save an image
   if (key == 's')
-  then save("main.lua")
+  then save("Coding Challenge 1")
   end
 end
 
