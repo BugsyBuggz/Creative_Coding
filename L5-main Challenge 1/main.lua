@@ -31,16 +31,6 @@ function keyPressed()
   end
 end
 
-function keyPressed()
-  --Increase Strokeweight
-  if (key == "z")
-    then strokeWeight(20)
-  else if (key == "x") then 
-    strokeWeight(5)
-  end
-end
-end
-
 function draw()
   font = loadFont('assets/IndieFlower-Regular.ttf')
   textSize(50)
@@ -49,8 +39,13 @@ function draw()
 end
 
 function keyPressed()
+  --Increase Strokeweight
+  if (key == "z")
+    then strokeWeight(20)
+  elseif (key == "x") then 
+    strokeWeight(5)
   --Clear Screen
-  if (key == 'c')
+  elseif (key == 'c')
   then clear()
   background("midnightblue")
   end
