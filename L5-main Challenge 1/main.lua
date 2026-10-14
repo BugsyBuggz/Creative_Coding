@@ -18,10 +18,6 @@ function mousePressed()
   stroke(random(255),random(255),random(255))
 end 
 
-function mousePressed()
-  stroke(random(255),random(255),random(255))
-end 
-
 --We use the key pressed function here
 function keyPressed()
 --If you hit the s key, save an image
