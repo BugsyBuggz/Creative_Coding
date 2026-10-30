@@ -27,6 +27,10 @@ sizeOptions = {25,50,75,100,125,150}
 
 randomSize = 0
 
+local circleOneY = 369
+local circleOneX = 54
+local circleOneRadius = 48
+
 function setup()
   size(864, 486)
   
@@ -119,10 +123,14 @@ function setup()
   randomSize = round(random(48,100))
 
   random1Size = round(random(250,300))
+
+  for i = 0,48,5 do
+  circle(369,54,i)
+  end
 end
 
 function draw()
-  -- Fills the background with the color yellow
+  -- Fills the background with the color black
   background(0)
 
   strokeWeight(5)
@@ -458,8 +466,9 @@ elseif cir3Color == 'pink' then
 elseif cir3Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-
-  circle(369,54,48)
+  for i = 0,48,5 do
+  circle(369,54,i)
+end
   pop()
 
   --Begin Little Circle Group III (Left Side)
