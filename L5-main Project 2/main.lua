@@ -116,7 +116,9 @@ function setup()
   -- Variable to hold the selected random size
   currentSize = random(sizeOptions)
 
-  randomSize = round(random(50,100))
+  randomSize = round(random(48,100))
+
+  random1Size = round(random(250,300))
 end
 
 function draw()
@@ -517,7 +519,12 @@ elseif cir6Color == 'pink' then
 elseif cir6Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-  circle(640,167,280)
+
+  if frameCount%120 == 0 then
+    random1Size = round(random(250,300))
+  end
+
+  circle(640,167,random1Size)
   pop()
 
   --Four
