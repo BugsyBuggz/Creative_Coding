@@ -22,9 +22,10 @@ object = {
 
 }
 
---Table for circle scale change
+--Table for circle scale changes
 sizeOptions = {25,50,75,100,125,150}
 
+--Starting values for circle scale changes
 randomSize = 0
 
 random1Size = 0
@@ -48,13 +49,17 @@ random9Size = 0
 random10Size = 0
 
 function setup()
+  --Canvas Size
   size(864, 486)
   
-  -- Set the program title
+  --Set the program title
   windowTitle("Project 2")
 
   describe('Draws Black background')
-
+  
+  --Variables for random color changes
+  
+  --Begin Triangles
   triColor = random(colorChoices)
 
   tri2Color = random(colorChoices)
@@ -91,16 +96,18 @@ function setup()
 
   tri18color = random(colorChoices)
 
-  tri19color = random(colorChocies)
+  tri19color = random(colorChoices)
 
   tri20color = random(colorChoices)
 
+  --Begin quads
   quadcolor = random(colorChoices)
 
   quad1color = random(colorChoices)
 
   quad2color = random(colorChoices)
 
+  --Begin Circles
   circolor = random(colorChoices)
 
   cir1color = random(colorChoices)
