@@ -158,6 +158,7 @@ function setup()
 
   random10Size = round(90,100)
 
+  --Small Middle Circle Scale Animation (Very Fast)
   for i = 0,48,5 do
   circle(369,54,i)
   end
@@ -820,9 +821,10 @@ end
   circle(193,278,random5Size)
   pop()
   
-  push()
-  fill(0)
-  text("X: "..mouseX.."  Y: "..mouseY, mouseX+5,mouseY+30)
-  pop()
-
+  --Save Screenshot
+  function keyPressed()
+  if (key == 's')
+  then save("Coding Challenge 1")
+  end
+end
 end
