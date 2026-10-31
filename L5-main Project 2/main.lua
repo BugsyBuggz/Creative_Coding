@@ -27,9 +27,15 @@ sizeOptions = {25,50,75,100,125,150}
 
 randomSize = 0
 
-local circleOneY = 369
-local circleOneX = 54
-local circleOneRadius = 48
+random1Size = 0
+
+random2Size = 0
+
+random3Size = 0
+
+random4Size = 0
+
+random5Size = 0
 
 function setup()
   size(864, 486)
@@ -123,6 +129,16 @@ function setup()
   randomSize = round(random(48,100))
 
   random1Size = round(random(250,300))
+  
+  random2Size = round(140,175)
+  
+  random3Size = round(280,310)
+
+  random4Size = round(30,50)
+
+  random5Size = round(40,55)
+
+  random6Size = round(140,160)
 
   for i = 0,48,5 do
   circle(369,54,i)
@@ -143,7 +159,7 @@ function draw()
 
   push()
   stroke(risoYellowR,risoYellowG,risoYellowB)
-  line(0,91,80,168)
+  line(0,91,110,192)
   pop()
 
   push()
@@ -312,6 +328,7 @@ elseif quad1Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
   quad(-60,-2,122,-5,306,157,102,152)
+
   --Top
   line(499,243,759,0)
   --Middle
@@ -334,6 +351,23 @@ elseif tri12Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
   triangle(465,0,880,280,880,0)
+  pop()
+
+  --Grid (Upper Right)
+    for lineX = 540, 865, 30 do
+    line(lineX, 0, lineX, 300)
+end
+
+  --Circle Grid (Upper Right)
+  push()
+    noStroke()
+    for x = 18, 28 do
+    for y = 0, 9 do
+      circleX = 15 + (x * 30)
+      circleY = 15 + (y * 30)
+      circle(circleX, circleY, 20)
+    end
+  end
   pop()
 
   --Begin BIG Triangle Group I
@@ -382,11 +416,31 @@ elseif tri15Color == 'yellow' then
 end
   triangle(322,434,538,0,885,249)
   pop()
-  
+
 --Begin Left Angle II
   line(0,486,361,210)
 
   line(120,0,361,210)
+
+    --Begin Angle I
+  push()
+  stroke(0)
+  line(0,336,205,490)
+
+  line(225,490,469,0)
+  pop()
+
+    if frameCount%120 == 0 then
+    tri16Color = random(colorChoices)
+end
+  if tri16Color == 'blue' then
+    fill(risoBlueR, risoBlueG, risoBlueB)
+elseif tri16Color == 'pink' then
+    fill(risoPinkR, risoPinkG, risoPinkB)
+elseif tri16Color == 'yellow' then
+    fill(risoYellowR, risoYellowG, risoYellowB)
+end
+  triangle(337,261,363,211,210,-2)
 
   --Begin Little Circle Group I (On Right)
 
@@ -528,11 +582,9 @@ elseif cir6Color == 'pink' then
 elseif cir6Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-
   if frameCount%120 == 0 then
     random1Size = round(random(250,300))
   end
-
   circle(640,167,random1Size)
   pop()
 
@@ -549,6 +601,7 @@ elseif cir7Color == 'pink' then
 elseif cir7Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
+  
   circle(640,167,220)
   pop()
 
@@ -565,7 +618,10 @@ elseif cir8Color == 'pink' then
 elseif cir8Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-  circle(640,167,159)
+  if frameCount%120 == 0 then
+    random2Size = round(random(140,175))
+  end
+  circle(640,167,random2Size)
   pop()
 
   --Two
@@ -597,7 +653,12 @@ elseif cir10Color == 'pink' then
 elseif cir10Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-  circle(640,167,43)
+
+  if frameCount%120 == 0 then
+    random4Size = round(random(30,50))
+  end
+
+  circle(640,167,random4Size)
   pop()
 
   --Angle Across I
@@ -608,18 +669,6 @@ end
   line(208,0,573,500)
 
   line(208,0,802,500)
-  
-  if frameCount%120 == 0 then
-    tri16Color = random(colorChoices)
-end
-  if tri16Color == 'blue' then
-    fill(risoBlueR, risoBlueG, risoBlueB)
-elseif tri16Color == 'pink' then
-    fill(risoPinkR, risoPinkG, risoPinkB)
-elseif tri16Color == 'yellow' then
-    fill(risoYellowR, risoYellowG, risoYellowB)
-end
-  triangle(337,261,363,211,210,-2)
 
 --Begin Big Circle Group II (On Left)
   
@@ -635,7 +684,12 @@ elseif cir11Color == 'pink' then
 elseif cir11Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-  circle(193,278,305)
+
+  if frameCount%120 == 0 then
+    random3Size = round(random(280,310))
+  end
+
+  circle(193,278,random3Size)
   pop()
 
   --Four
@@ -667,7 +721,12 @@ elseif cir13Color == 'pink' then
 elseif cir13Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-  circle(193,278,148)
+
+  if frameCount%120 == 0 then
+    random6Size = round(random(140,160))
+  end
+
+  circle(193,278,random6Size)
   pop()
 
   --Two
@@ -698,17 +757,14 @@ elseif cir15Color == 'pink' then
 elseif cir15Color == 'yellow' then
     fill(risoYellowR, risoYellowG, risoYellowB)
 end
-  circle(193,278,53)
+
+  if frameCount%120 == 0 then
+    random5Size = round(random(40,55))
+  end
+
+  circle(193,278,random5Size)
   pop()
-
-  --Begin Angle I
-  push()
-  stroke(0)
-  line(0,336,205,490)
-
-  line(225,490,469,0)
-  pop()
-
+  
   push()
   fill(0)
   text("X: "..mouseX.."  Y: "..mouseY, mouseX+5,mouseY+30)
