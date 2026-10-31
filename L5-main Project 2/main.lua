@@ -821,10 +821,10 @@ end
   circle(193,278,random5Size)
   pop()
   
-  --Save Screenshot
+  --Save a Screenshot
   function keyPressed()
   if (key == 's')
-  then save("Coding Challenge 1")
+  then save("Random Pattern 1")
   end
 end
 end
