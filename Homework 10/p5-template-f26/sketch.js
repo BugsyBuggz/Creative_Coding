@@ -35,9 +35,13 @@ function draw() {
   fill(255, 255, 255);
   ellipse(500,80,200,20);
 
-  //Meteor
-  fill(40,28,28)
-  ellipse(mouseX,mouseY,width/11,height/8);
+  // Draws bird
+  Push();
+    Translate(mouseX,131);
+    fill(40,28,28);
+    ellipse(mouseX,131,20,20);
+    ellipse(mouseX,131,20,20);
+  Pop();
 
   // Draws farthest landscape "Hill"
   noStroke();
