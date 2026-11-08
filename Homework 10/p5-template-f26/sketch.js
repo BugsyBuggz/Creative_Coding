@@ -3,8 +3,9 @@ function setup() {
 }
 
 function draw() {
-  background(140, 237, 237);
+  background(140, 237, 255);
 
+  noStroke();
   fill(255,255,190);
   circle(200,170,120);
 
@@ -12,89 +13,125 @@ function draw() {
   fill(40,28,28)
   ellipse(mouseX,mouseY,width/11,height/8);
 
-  // Draws light blue mountain at the base of the sun
-  fill(0,100,200);
-  triangle(150,250,240,180,340,250);
+  // Draws farthest landscape "Hill"
+  noStroke();
+  fill(0,150,0);
+  rect(0,170,600,220);
 
-  // Draws farthest left mountain
-  fill(0,50,100);
-  triangle(-30,250,60,170,150,250);
-
-  // Draws mountain, second one from the right
-  fill(0,50,100);
-  triangle(220,250,300,170,360,250);
-
-  // Draws biggest mountain, second from the left
-  fill(0,30,100);
-  triangle(50,250,136,145,250,250);
-
-  // Draws farthest right mountain
-  fill(0,30,100);
-  triangle(300,250,380,150,430,250);
+  // Draws second to farthest landscape
+  noStroke();
+  fill(0,120,0);
+  triangle(200,250,600,220,600,325)
 
   // Draws top left part of landscape "Hill"
-  stroke(1);
-  strokeWeight(1);
+  noStroke();
   fill(0,100,0);
   ellipse(100,320,450,200);
 
-  // Draws middle right part of landscape "Hill"
-  stroke(1);
+  // Draws shadow for peak of barn
+  noStroke();
+  fill(170, 74, 68);
+  triangle(82,269,122,230,162,269);
+
+  // Draws shadow for barn
+  noStroke();
+  fill(119, 36, 36);
+  rect(62,269,80,50);
+  
+  // Draws peak of barn
+  noStroke();
+  fill(170, 74, 68);
+  triangle(82,269,122,230,162,269);
+
+  // Draws barn
+  noStroke();
+  fill(170, 74, 68);
+  rect(82,269,80,50);
+
+  // Draws left half roof of barn
+  noStroke();
+  fill(128, 128, 128);
+  quad(55,269,94,235,122,230,82,269);
+
+  // Draws right half roof of barn
   strokeWeight(1);
-  fill(0,90,0);
-  ellipse(380,360,500,200);
+  stroke(112, 128, 144);
+  line(122,230,164,270);
+
+  // Draws middle right part of landscape "Hill"
+  noStroke();
+  strokeWeight(1);
+  fill(0,80,0);
+  ellipse(380,360,520,200);
 
   // Draws bottom part of landscape
-  stroke(1);
+  noStroke();
   strokeWeight(1);
-  fill(0,70,0);
+  fill(0,60,0);
   ellipse(220,450,800,300);
 
   // Draws bottom left part of landscape
-  stroke(1);
-  strokeWeight(1);
-  fill(0,50,0);
+  noStroke();
+  fill(0,40,0);
   triangle(0,305,375,400,0,400);
 
-  // Draws pond in front
+  // Draws right hay bale shadow
   noStroke();
-  fill(0,100,200);
-  ellipse(500,420,400,100);
-  
-  // Draws left tree trunk
-  stroke(1);
-  strokeWeight(4);
-  color(77,51,26);
-  line(80,245,80,300);
+  fill(152, 118, 84);
+  circle(212,358,50);
 
-  // Draws left tree
+  // Draws right hay bale
   noStroke();
-  fill(255,210,0);
-  triangle(62,269,80,200,100,269);
+  fill(255,255,100);
+  circle(221,361,50);
+
+  // Draws middle hay bale shadow
+  noStroke();
+  fill(152, 118, 84);
+  circle(114,328,40);
+
+  // Draws middle hay bale
+  noStroke();
+  fill(255,255,100);
+  circle(122,331,40);
+
+  // Draws left hay bale shadow
+  noStroke();
+  fill(152, 118, 84);
+  circle(23,358,50);
+
+  // Draws left hay bale
+  noStroke();
+  fill(255,255,100);
+  circle(33,361,50);
+
+  // Draws distant hay bale shadow on left
+  noStroke();
+  fill(152, 118, 84);
+  circle(332,323,20);
+
+  // Draws distant hay bale on left
+  noStroke();
+  fill(255,255,100);
+  circle(328,325,20);
+
+  // Draws distant middle hay bale shadow
+  noStroke();
+  fill(152, 118, 84);
+  circle(473,266,13);
+
+  // Draws distant middle hay bale
+  noStroke();
+  fill(255,255,100);
+  circle(477,267,13);
 
   // Draws middle tree trunk
   stroke(1);
-  strokeWeight(6);
+  strokeWeight(2);
   color(255,255,255);
   line(175,245,175,320);
-  
-  // Draws middle tree
-  noStroke();
-  fill(255,220,0);
-  triangle(140,300,180,225,210,300);
 
-  // Draws tree trunk on the right
-  stroke(1);
-  strokeWeight(7);
-  color(255,255,255);
-  line(310,280,310,360);
-  
-  // Draws right tree
-  noStroke();
-  fill(255,240,0);
-  triangle(275,325,310,260,350,325);
-
-  fill(0)
+  fill(0);
   text(mouseX, 10, 10);
   text(mouseY, 10, 20);
 }
