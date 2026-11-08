@@ -78,6 +78,11 @@ function draw() {
   fill(0,150,0);
   rect(0,170,600,220);
 
+  // Draws tractor
+  fill(0)
+  square(236,183,10)
+  236=x+1
+
   // Draws yellow tree 1 of tree line (left to right)
   noStroke();
   fill(255, 215, 0);
