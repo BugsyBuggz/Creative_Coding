@@ -1,5 +1,7 @@
 function setup() {
   createCanvas(600, 400);
+
+  textOutput();
 }
 
 function draw() {
@@ -9,6 +11,42 @@ function draw() {
   noStroke();
   fill(255,255,190);
   circle(150,170,120);
+
+  // Draws bird
+  fill(0)
+
+  // Draw bird at the mouse position
+  push();
+  translate(mouseX, 50);
+  circle(30, 25, 30);
+  circle(5, 25, 30);
+  pop();
+
+  fill(140, 237, 255)
+  // Draws shapes to form wings the mouse position
+  push();
+  translate(mouseX, 50);
+  circle(30, 30, 30);
+  circle(5, 30, 30);
+  pop();
+
+  // Draws bird II
+  fill(0)
+
+  // Draw bird at the mouse position
+  push();
+  translate(mouseX, 50);
+  circle(100, 5, 15);
+  circle(85, 5, 15);
+  pop();
+
+  fill(140, 237, 255)
+  // Draws shapes to form wings the mouse position
+  push();
+  translate(mouseX, 50);
+  circle(100, 10, 15);
+  circle(85, 10, 15);
+  pop();
 
   // Draws cloud shadow (upper)
   noStroke();
@@ -34,14 +72,6 @@ function draw() {
   noStroke();
   fill(255, 255, 255);
   ellipse(500,80,200,20);
-
-  // Draws bird
-  Push();
-    Translate(mouseX,131);
-    fill(40,28,28);
-    ellipse(mouseX,131,20,20);
-    ellipse(mouseX,131,20,20);
-  Pop();
 
   // Draws farthest landscape "Hill"
   noStroke();
