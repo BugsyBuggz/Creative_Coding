@@ -5,9 +5,35 @@ function setup() {
 function draw() {
   background(140, 237, 255);
 
+  // Draws sun
   noStroke();
   fill(255,255,190);
-  circle(200,170,120);
+  circle(150,170,120);
+
+  // Draws cloud shadow (upper)
+  noStroke();
+  fill(211, 211, 211);
+  ellipse(263,85,300,20);
+
+  // Draws cloud shadow (lower)
+  noStroke();
+  fill(211, 211, 211);
+  ellipse(500,85,200,20);
+  
+  // Draws clouds (top)
+  noStroke();
+  fill(255, 255, 255);
+  ellipse(363,75,400,20);
+
+  // Draws clouds (middle left)
+  noStroke();
+  fill(255, 255, 255);
+  ellipse(363,65,200,20);
+
+  // Draws clouds (bottom right)
+  noStroke();
+  fill(255, 255, 255);
+  ellipse(500,80,200,20);
 
   //Meteor
   fill(40,28,28)
@@ -17,6 +43,26 @@ function draw() {
   noStroke();
   fill(0,150,0);
   rect(0,170,600,220);
+
+  // Draws yellow tree 1 of tree line (left to right)
+  noStroke();
+  fill(255, 215, 0);
+  circle(305,260,120);
+  
+  // Draws red tree 3 of tree line
+  noStroke();
+  fill(194, 74, 39);
+  circle(480,230,120);
+  
+  // Draws orange tree 2 of tree line
+  noStroke();
+  fill(255, 127, 0);
+  circle(380,240,120);
+
+  // Draws orange tree 4 of tree line
+  noStroke();
+  fill(255, 127, 0);
+  circle(580,220,120);
 
   // Draws second to farthest landscape
   noStroke();
@@ -124,12 +170,6 @@ function draw() {
   noStroke();
   fill(255,255,100);
   circle(477,267,13);
-
-  // Draws middle tree trunk
-  stroke(1);
-  strokeWeight(2);
-  color(255,255,255);
-  line(175,245,175,320);
 
   fill(0);
   text(mouseX, 10, 10);
