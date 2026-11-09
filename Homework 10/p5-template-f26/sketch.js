@@ -240,8 +240,4 @@ function draw() {
   noStroke();
   fill(255,255,100);
   circle(477,267,13);
-
-  fill(0);
-  text(mouseX, 10, 10);
-  text(mouseY, 10, 20);
 }
