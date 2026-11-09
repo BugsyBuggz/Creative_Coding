@@ -1,7 +1,15 @@
+let x = 0
+
+let x1 = 2
+
 function setup() {
   createCanvas(600, 400);
 
   textOutput();
+
+  x = -25;
+
+  x1 = 2;
 }
 
 function draw() {
@@ -79,9 +87,32 @@ function draw() {
   rect(0,170,600,220);
 
   // Draws tractor
-  fill(0)
-  square(236,183,10)
-  236=x+1
+  fill(30, 144, 255);
+  square(x, 200, 10);
+  rect(x, 200, 30,10);
+  fill(0);
+  circle(x,210,20);
+  circle(x,210,10);
+
+  // Move the object to the right
+  x += 1;
+  
+  // Reset to the left side
+  if (x > width + 25) {
+    x = -25;
+  }
+
+  // Draws tractor
+  fill(0);
+  circle(x1,212,10);
+
+  // Move the object to the right
+  x1 += 1;
+  
+  // Reset to the left side
+  if (x1 > width + 25) {
+    x1 = -25;
+  }
 
   // Draws yellow tree 1 of tree line (left to right)
   noStroke();
