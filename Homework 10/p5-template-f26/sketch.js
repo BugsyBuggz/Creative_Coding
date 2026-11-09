@@ -13,6 +13,7 @@ function setup() {
 }
 
 function draw() {
+  // Draw sky
   background(140, 237, 255);
 
   // Draws sun
